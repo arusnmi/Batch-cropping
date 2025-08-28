@@ -1,6 +1,11 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("Batch Image Cropper")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "This is a tool used for cropping images in batch using the autocrop library."
+)
+st.write("Upload your images below:")
+
+uploaded_files = st.file_uploader(
+    "Choose image files", accept_multiple_files=True, type=["jpg", "jpeg", "png"]
 )
